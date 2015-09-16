@@ -14,6 +14,7 @@
 		FD54F3E91BA9A2E2002DF8CA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD54F3E81BA9A2E2002DF8CA /* Images.xcassets */; };
 		FD54F3EC1BA9A2E2002DF8CA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD54F3EA1BA9A2E2002DF8CA /* LaunchScreen.xib */; };
 		FD54F3F81BA9A2E2002DF8CA /* NSStringCategoryTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FD54F3F71BA9A2E2002DF8CA /* NSStringCategoryTestTests.m */; };
+		FDD1363C1BA9B0F100136269 /* NSString+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = FDD1363B1BA9B0F100136269 /* NSString+Util.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		FD54F3F11BA9A2E2002DF8CA /* NSStringCategoryTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NSStringCategoryTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD54F3F61BA9A2E2002DF8CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD54F3F71BA9A2E2002DF8CA /* NSStringCategoryTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSStringCategoryTestTests.m; sourceTree = "<group>"; };
+		FDD1363A1BA9B0F100136269 /* NSString+Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+Util.h"; path = "Common/NSString+Util.h"; sourceTree = "<group>"; };
+		FDD1363B1BA9B0F100136269 /* NSString+Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Util.m"; path = "Common/NSString+Util.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,13 +84,11 @@
 		FD54F3DA1BA9A2E2002DF8CA /* NSStringCategoryTest */ = {
 			isa = PBXGroup;
 			children = (
-				FD54F3DF1BA9A2E2002DF8CA /* AppDelegate.h */,
-				FD54F3E01BA9A2E2002DF8CA /* AppDelegate.m */,
-				FD54F3E21BA9A2E2002DF8CA /* ViewController.h */,
-				FD54F3E31BA9A2E2002DF8CA /* ViewController.m */,
-				FD54F3E51BA9A2E2002DF8CA /* Main.storyboard */,
+				FD54F4041BA9A345002DF8CA /* Model */,
+				FD54F4031BA9A33A002DF8CA /* Controller */,
+				FD54F4021BA9A333002DF8CA /* View */,
+				FD54F4011BA9A329002DF8CA /* Common */,
 				FD54F3E81BA9A2E2002DF8CA /* Images.xcassets */,
-				FD54F3EA1BA9A2E2002DF8CA /* LaunchScreen.xib */,
 				FD54F3DB1BA9A2E2002DF8CA /* Supporting Files */,
 			);
 			path = NSStringCategoryTest;
@@ -117,6 +118,42 @@
 				FD54F3F61BA9A2E2002DF8CA /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FD54F4011BA9A329002DF8CA /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				FDD1363A1BA9B0F100136269 /* NSString+Util.h */,
+				FDD1363B1BA9B0F100136269 /* NSString+Util.m */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		FD54F4021BA9A333002DF8CA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FD54F3E51BA9A2E2002DF8CA /* Main.storyboard */,
+				FD54F3EA1BA9A2E2002DF8CA /* LaunchScreen.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		FD54F4031BA9A33A002DF8CA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FD54F3DF1BA9A2E2002DF8CA /* AppDelegate.h */,
+				FD54F3E01BA9A2E2002DF8CA /* AppDelegate.m */,
+				FD54F3E21BA9A2E2002DF8CA /* ViewController.h */,
+				FD54F3E31BA9A2E2002DF8CA /* ViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FD54F4041BA9A345002DF8CA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,6 +258,7 @@
 			files = (
 				FD54F3E41BA9A2E2002DF8CA /* ViewController.m in Sources */,
 				FD54F3E11BA9A2E2002DF8CA /* AppDelegate.m in Sources */,
+				FDD1363C1BA9B0F100136269 /* NSString+Util.m in Sources */,
 				FD54F3DE1BA9A2E2002DF8CA /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -418,6 +456,7 @@
 				FD54F3FD1BA9A2E2002DF8CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FD54F3FE1BA9A2E2002DF8CA /* Build configuration list for PBXNativeTarget "NSStringCategoryTestTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +465,7 @@
 				FD54F4001BA9A2E2002DF8CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
